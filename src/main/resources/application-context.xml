@@ -10,7 +10,12 @@
 
     <bean id="telegramCatPictureBot" class="com.yourbro.bot.TelegramCatPictureBot">
         <property name="configurationService" ref="configurationService" />
+        <property name="catService" ref="catService" />
     </bean>
 
     <bean id="configurationService" class="com.yourbro.configurationservice.ConfigurationService"/>
+
+    <bean id="catService" class="com.yourbro.cat.CatService">
+        <property name="url" value="https://cataas.com/cat" />
+    </bean>
 </beans>
